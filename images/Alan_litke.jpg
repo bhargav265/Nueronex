@@ -1,0 +1,1602 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+<title>Advanced Instrumentation Seminars (AIS)</title>
+<link rel="stylesheet" type="text/css" href="includes/general.css" />
+<link rel="stylesheet" type="text/css" href="admin/adminGeneral.css">
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<script type="text/javascript" language="javascript" src="includes/leftnavJS.js"></script>
+<script type="text/javascript" language="JavaScript">
+var imagenumber = 4 ; 
+var randomnumber = Math.random() ; 
+var rand1 = Math.round( (imagenumber-1) * randomnumber) + 1 ; 
+images = new Array 
+images[1] = "includes/left_nav_image_01.jpg"
+images[2] = "includes/left_nav_image_02.jpg"
+images[3] = "includes/left_nav_image_03.jpg"
+images[4] = "includes/left_nav_image_04.jpg"
+var image = images[rand1]
+
+// -- End Hiding Here -->
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+function checkEmail(myForm) {
+if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(myForm.subscriberEmail.value)){
+return (true)
+}
+alert("Invalid email address! Please re-enter.")
+document.MLLForm.subscriberEmail.focus()
+return (false)
+}
+</script>
+
+</head>
+
+<body id="seminarArchive">
+
+<!-- stopindex --><a href="#content" class="doNotDisplay doNotPrint">Skip to 
+main content.</a>
+<!-- top global nav area starts here - do not edit -->
+
+
+<table width="100%" border="0" id="top" cellspacing="0" cellpadding="0">
+	<tbody>
+	<tr>
+		<td align="left" valign="bottom" width="356">
+		<div class="logo">
+			<a href="default.asp"><img border="0" src="includes/ais_header_logo.jpg" alt="Advanced Instrumentation Seminars Home" height="68" /></a></div>
+		</td>
+		<td align="right" valign="bottom" nowrap="nowrap">
+		<div id="SLACstdnav">
+			<ul id="globalnav">
+				<li>Go to &gt; </li>
+				<li><a href="http://www.slac.stanford.edu/">SLAC Home</a> |</li>
+				<li><a href="http://today.slac.stanford.edu/">SLAC Today</a> |</li>
+				<li><a href="http://home.slac.stanford.edu/forstaff.html">For Staff</a> 
+				|</li>
+				<li><a href="http://home.slac.stanford.edu/forusers.html">For Users</a>
+				<br />
+				</li>
+				<li><a href="http://home.slac.stanford.edu/photonscience.html">Photon 
+				Science</a> |</li>
+				<li><a href="http://home.slac.stanford.edu/ppap.html">Particle Physics and Astrophysics</a> |</li>
+				<li><a href="../operations/">Operations</a></li>
+			</ul>
+		</div>
+		</td>
+		<td align="right" valign="bottom" width="250">
+		<div id="SLAC">
+			<div class="SLACstdsearch" id="search">
+				<form name="form1" method="get" onsubmit="doSearch(); return false;" action="http://www-psearch.slac.stanford.edu/SLACSearch/app/slac/index">
+					<input type="hidden" name="qc" /><input id="searchbox" type="text" maxlength="2047" class="searchbox" name="qt" size="20" value="Search" onfocus="value=''" /> <input type="image" name="submit" src="includes/go.gif" alt="go" width="20" height="20" /><br />
+					<div style="display:inline; ">
+						<input type="radio" id="web" name="searchType" value="public" /><a href="http://www-psearch.slac.stanford.edu/SLACSearch/app/slac/index">SLAC 
+						WEB</a>&nbsp; <input type="radio" name="searchType" value="people" checked="checked" /><a class="search" href="http://www-public.slac.stanford.edu/phonebook/search.html">PEOPLE</a>&nbsp;
+						<input type="radio" name="searchType" value="ais" /><a href="includes/default.asp">AIS</a>&nbsp; </div>
+				</form>
+				<script type="text/javascript">
+					var f = document.form1;
+					f.searchType[1].disabled = false;
+		
+					function doSearch() {
+						var peopleurl = "http://www-public.slac.stanford.edu/phonebook/dirsearch.aspx?lf=1%26url=&amp;gone=active%26NAME="+f.qt.value
+					  	var fixedurl = unescape(peopleurl)
+							if (f.searchType[0].checked)
+								document.location = "http://www-psearch.slac.stanford.edu/SLACSearch/app/slac/index?style=mainSite&qt="+f.qt.value;
+							else if (f.searchType[2].checked)
+								document.location = "http://www-psearch.slac.stanford.edu/SLACSearch/app/slac/index?style=AIS&amp;qt="+f.qt.value;
+							else
+								document.location = fixedurl;
+					}
+				</script>
+			</div>
+		</div>
+		</td>
+	</tr>
+	<tr>
+		<td valign="bottom" colspan="2" style="background-image: url('includes/topbg.gif'); background-repeat: repeat-x; background-position-y: bottom" class="headerLogoBg"><img border="0" src="includes/AISslogan.jpg" height="27" alt="__" class="doNotPrint" /></td>
+		<td valign="bottom" style="background-image: url('includes/topbg.gif'); background-repeat: repeat-x; background-position-y: bottom" class="headerLogoBg"><img border="0" src="includes/smallSlacLogo.gif" align="left" alt="__" class="doNotPrint" width="75" height="27" /></td>
+	</tr>
+</tbody>
+</table>
+
+<!-- top global nav area ends here --><!-- ##### Main Content ##### --><!-- startindex --><table width="100%" cellpadding="0" cellspacing="0" border="0">
+	<tbody>
+	<tr valign="top">
+		<td width="180px" id="leftnav">
+		<!-- start left nav -->
+		
+
+<ul id="nav">
+	<li class="home"><a href="default.asp">AIS Home</a></li>
+	<li class="aboutAIS"><a href="aboutAIS.asp">About AIS</a></li>
+	<li class="speakers"><a href="listPastSpeakers.asp">Speakers</a></li>
+	<li class="seminarArchive"><a href="listPastSeminars.asp">Seminar Archive</a></li>
+	<li class="infoForSpeakers"><a href="infoForSpeakers.asp">Info for Speakers</a></li>
+	<li class="subscribe"><a href="emailSubscribe.asp">Subscribe to Our Mailing List</a></li>
+	<li class="contactAIS"><a href="contactAIS.asp">Contact AIS</a></li>
+</ul>
+
+<p>
+<script language="JavaScript" type="text/javascript">
+<!-- Hide this script from old browsers --
+document.write('<p id="images"><img alt="Click on the image for a description of the photograph." src="' + image + '" border="0"></p>')
+// -- End Hiding Here --></script>
+<noscript><p id="images"><a href="includes/default.asp">
+<img src="images/left_nav_image_01.jpg" alt="Magnet Photo" border="0" width="108" height="143">
+</p>
+</noscript>
+<!-- end rotating images --></p>
+
+<!--
+<div class="mailListOutterBox">
+	<div class="mailListInnerBox">
+	<p>Join the AIS Mailing List
+	<form action="../joinMLL.asp" name="MLLForm" method="post" onSubmit="return checkEmail(this)">
+	<input type="text" value="enter email address" name="subscriberEmail" onfocus="value=''" style="margin:8px;">
+	<input type="submit" value="subscribe" name="submitButton">
+	</form>
+	</p>
+	</div>
+</div>
+-->
+
+<p>
+		<!-- end left nav --></p>
+		</td>
+		<td id="content">
+		<div id="maincontent" style="margin-left:20px;">
+			<!-- start page content -->
+			<h1>Seminar Archive</h1>
+			
+
+
+			<p>There are total of 155 past seminars</p>
+			<table border="0" cellspacing="0" width="1000" cellpadding="2" id="Nom">
+				<tr class="NomHeader">
+					<td width="90" align="center">Date</td>
+					<td colspan="2" align="center">Speaker</td>
+					<td>Title</td>
+				</tr>
+			
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/27/2017</b><br /><a href="seminar/230" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb230.jpg" height="40"></td>
+						<td valign="top">Fiorenze Micheli</td>
+						<td valign="top">Under pressure: vulnerability and resilience of marine ecosystems to multiple escalating stressors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/12/2017</b><br /><a href="seminar/229" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb229.jpg" height="40"></td>
+						<td valign="top">Amelia Greig</td>
+						<td valign="top">Micro-Propulsion Development at CalPoly</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/19/2016</b><br /><a href="seminar/228" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb228.jpg" height="40"></td>
+						<td valign="top">Gianluigi De Geronimo</td>
+						<td valign="top">Microelectronics for Radiation Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/5/2016</b><br /><a href="seminar/227" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb227.jpg" height="40"></td>
+						<td valign="top">Audrey Bowden</td>
+						<td valign="top">Lighting the Path to Better Healthcare</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/2/2016</b><br /><a href="seminar/226" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb226.jpg" height="40"></td>
+						<td valign="top">Dr. Debbie Bard</td>
+						<td valign="top">Accelerating Science with data-intensive computing</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/16/2016</b><br /><a href="seminar/222" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb222.jpg" height="40"></td>
+						<td valign="top">Zhong He</td>
+						<td valign="top">Polaris to Orion 3-D CdZnTe Gamma-Neutron Imaging Spectrometers</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/4/2016</b><br /><a href="seminar/225" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb225.jpg" height="40"></td>
+						<td valign="top">Hongbo Zhu</td>
+						<td valign="top">Early Thoughts on the CEPC Detector</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>12/11/2015</b><br /><a href="seminar/224" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb224.jpg" height="40"></td>
+						<td valign="top">Autumn Bordner</td>
+						<td valign="top">Marshalling Methods: Using Art and Science to Explore the Nuclear Legacy of the Marshall Islands.</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/2/2015</b><br /><a href="seminar/223" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb223.jpg" height="40"></td>
+						<td valign="top">Bianxiao Cui</td>
+						<td valign="top">Exploring the Bio-Nano interface: probing live cells with nanodevices</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/22/2015</b><br /><a href="seminar/220" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb220.jpg" height="40"></td>
+						<td valign="top">Baratunde Cola</td>
+						<td valign="top">Georgia Tech Heat Lab</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/30/2015</b><br /><a href="seminar/221" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb221.jpg" height="40"></td>
+						<td valign="top">PROF. GUY RON</td>
+						<td valign="top">THE PROTON RADIUS – OLD MEASUREMENTS AND NEW IDEAS</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>8/5/2015</b><br /><a href="seminar/219" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb219.jpg" height="40"></td>
+						<td valign="top">Peter Gorham</td>
+						<td valign="top">The SLAC T-530 Askaryan Calorimeter Experiment -- ACE</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/17/2015</b><br /><a href="seminar/217" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb217.jpg" height="40"></td>
+						<td valign="top">Xiaoshu Chen</td>
+						<td valign="top">Atomic layer lithography of wafer-scale nanogap arrays for extreme confinement of electromagnetic waves</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/15/2015</b><br /><a href="seminar/218" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb218.jpg" height="40"></td>
+						<td valign="top">Sang Jun Lee</td>
+						<td valign="top">Transition-edge sensor X-ray microcalorimeters for high resolution X-ray spectroscopy</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/30/2015</b><br /><a href="seminar/215" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb215.jpg" height="40"></td>
+						<td valign="top">Debbie Senesky</td>
+						<td valign="top">High Band Gap Sensors for High-Temperature, Radiation-Rich Environments</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/22/2015</b><br /><a href="seminar/216" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb216.jpg" height="40"></td>
+						<td valign="top">Mike Pivovaroff</td>
+						<td valign="top">Recent advances in reflective hard x-ray/soft gamma-ray optics & the prospects for future Astrophysical Missions</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/15/2015</b><br /><a href="seminar/214" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb214.jpg" height="40"></td>
+						<td valign="top">Dr. Mark Clampin</td>
+						<td valign="top">James Webb Space Telescope: the road to Launch</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/26/2015</b><br /><a href="seminar/212" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb212.jpg" height="40"></td>
+						<td valign="top">Mitch D'Ewart</td>
+						<td valign="top">A Roadmap for Industrial I/O at SLAC</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/26/2015</b><br /><a href="seminar/213" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb213.jpg" height="40"></td>
+						<td valign="top">Anton Tyazhev</td>
+						<td valign="top">Chromium-Compensated GaAs X-ray Sensors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/5/2015</b><br /><a href="seminar/211" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb211.jpg" height="40"></td>
+						<td valign="top">Mark Schnitzer</td>
+						<td valign="top">Reading the neural code in behaving animals, ~1000 neurons at a time</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/6/2015</b><br /><a href="seminar/210" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb210.jpg" height="40"></td>
+						<td valign="top">Chu-En Chang</td>
+						<td valign="top">Multiband Charge-Coupled Device</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/4/2015</b><br /><a href="seminar/208" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb208.jpg" height="40"></td>
+						<td valign="top">Costel Rotundu</td>
+						<td valign="top">Recent developments in low temperature very high pressure diamond anvil cell resistivity measurement</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>1/7/2015</b><br /><a href="seminar/209" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb209.jpg" height="40"></td>
+						<td valign="top">Nicolo Cartiglia</td>
+						<td valign="top">Ultra-Fast Silicon Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>12/5/2014</b><br /><a href="seminar/207" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb207.jpg" height="40"></td>
+						<td valign="top">Prof. Ada Poon</td>
+						<td valign="top">Engineering near-field interactions within the body for powering bioelectronic medicines</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/19/2014</b><br /><a href="seminar/206" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb206.jpg" height="40"></td>
+						<td valign="top">Paul Welander</td>
+						<td valign="top">Cryogenic RF Characterization of Superconducting Materials with Cu and Nb-Coated Cavities</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/15/2014</b><br /><a href="seminar/204" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb204.jpg" height="40"></td>
+						<td valign="top">Lyman Page</td>
+						<td valign="top">CMB Instrumentation</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/15/2014</b><br /><a href="seminar/202" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb202.jpg" height="40"></td>
+						<td valign="top">Jason Rhodes</td>
+						<td valign="top">Exploring The Dark Sector with Euclid and WFIRST-AFTA</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/8/2014</b><br /><a href="seminar/201" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb201.jpg" height="40"></td>
+						<td valign="top">Lisa Giocomo</td>
+						<td valign="top">Spatial Memory in Mice</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/29/2014</b><br /><a href="seminar/196" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb196.jpg" height="40"></td>
+						<td valign="top">Jelena Ninkovic</td>
+						<td valign="top">Precision radiation detectors for cutting edge research projects developed at the MPS Semiconductor Lab </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>7/17/2014</b><br /><a href="seminar/199" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb199.jpg" height="40"></td>
+						<td valign="top">Kwabena Boahen</td>
+						<td valign="top">Design and Application of Neuromorphic Chips</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/2/2014</b><br /><a href="seminar/198" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb198.jpg" height="40"></td>
+						<td valign="top">Daniel Palanker</td>
+						<td valign="top">Restoration of Sight with Photovoltaic Subretinal Prosthesis</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/27/2014</b><br /><a href="seminar/200" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb200.jpg" height="40"></td>
+						<td valign="top">Michael Stryker</td>
+						<td valign="top">A neural circuit that controls the  gain of sensory responses and plasticity in mouse visual cortex</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/11/2014</b><br /><a href="seminar/194" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb194.jpg" height="40"></td>
+						<td valign="top">Juan Estrada</td>
+						<td valign="top">Astronomical Instrumentation for Dark Energy Using Superconductor Detectors (MKIDs)</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/9/2014</b><br /><a href="seminar/195" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb195.jpg" height="40"></td>
+						<td valign="top">Lisa Poyneer</td>
+						<td valign="top">Adaptive optics technologies for exoplanets and x rays</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/27/2014</b><br /><a href="seminar/193" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb193.jpg" height="40"></td>
+						<td valign="top">E. J. Chichilnisky</td>
+						<td valign="top">Artificial retina: design principles for a high-fidelity brain-machine interface</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/12/2014</b><br /><a href="seminar/192" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb192.jpg" height="40"></td>
+						<td valign="top">Bruce Macintosh</td>
+						<td valign="top">Gemini Planet Finder</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/6/2014</b><br /><a href="seminar/191" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb191.jpg" height="40"></td>
+						<td valign="top">Dipak Paramanik</td>
+						<td valign="top">Fabrication of vertically aligned core-shell  nano pillar structure for high sensitive photodetectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/26/2014</b><br /><a href="seminar/190" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb190.jpg" height="40"></td>
+						<td valign="top">Alan Litke</td>
+						<td valign="top">A Biological Pixel Detector</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/13/2014</b><br /><a href="seminar/189" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb189.jpg" height="40"></td>
+						<td valign="top">Michael Campbell</td>
+						<td valign="top">High spatial resolution spectroscopic X-ray imaging using the Medipix3RX and first measurements with the Timepix3 </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>12/17/2013</b><br /><a href="seminar/188" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb188.jpg" height="40"></td>
+						<td valign="top">Dale Li</td>
+						<td valign="top">Superconducting Polarimeter Arrays</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/6/2013</b><br /><a href="seminar/187" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb187.jpg" height="40"></td>
+						<td valign="top">Jordan Greenlee</td>
+						<td valign="top">Ionic-Electronic Materials and Devices for Neuromorphic Computing Applications</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/24/2013</b><br /><a href="seminar/186" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb186.jpg" height="40"></td>
+						<td valign="top">Aldo Mozzanica</td>
+						<td valign="top">Jungfrau, Mönch and Eiger: Detector development at the Swiss Light Source</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/9/2013</b><br /><a href="seminar/183" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb183.jpg" height="40"></td>
+						<td valign="top">Simon Bandler</td>
+						<td valign="top">High-resolution X-ray Microcalorimeters for Astrophysics and Solar Physics</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/8/2013</b><br /><a href="seminar/185" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb185.jpg" height="40"></td>
+						<td valign="top">Jochen Kaiser</td>
+						<td valign="top">Surface Related Aspects of Process Steps on Germanium</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/19/2013</b><br /><a href="seminar/184" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb184.jpg" height="40"></td>
+						<td valign="top">Erin Smith</td>
+						<td valign="top">The Stratospheric Observatory for Infrared Astronomy (SOFIA)</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/18/2013</b><br /><a href="seminar/182" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb182.jpg" height="40"></td>
+						<td valign="top">Gary Sanders</td>
+						<td valign="top">Managing Big Science Projects: Avoiding the Near Death Experience</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/18/2013</b><br /><a href="seminar/181" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb181.jpg" height="40"></td>
+						<td valign="top">Gary Sanders</td>
+						<td valign="top">Thirty Meter Telescope: How California, Canada, China, India and Japan are Working Together to Build a Next Generation Extremely Large Telescope</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/4/2013</b><br /><a href="seminar/180" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb180.jpg" height="40"></td>
+						<td valign="top">Hsiao-Mei (Sherry) Cho</td>
+						<td valign="top">Transition Edge Sensor for CMB polarization</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>8/22/2013</b><br /><a href="seminar/179" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb179.jpg" height="40"></td>
+						<td valign="top">Gene Hilton</td>
+						<td valign="top">Cryogenic Detectors: Physics, Fabrication, and Examples</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/19/2013</b><br /><a href="seminar/178" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb178.jpg" height="40"></td>
+						<td valign="top">Iris Abt</td>
+						<td valign="top">Germanium Detectors and How The Universe Ticks</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>5/22/2013</b><br /><a href="seminar/177" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb177.jpg" height="40"></td>
+						<td valign="top">Leo Greiner</td>
+						<td valign="top">A novel MAPS based vertex detector for the STAR experiment at RHIC</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/13/2013</b><br /><a href="seminar/176" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb176.jpg" height="40"></td>
+						<td valign="top">Kent Irwin</td>
+						<td valign="top">Superconducting sensors: probing cosmology and forensics</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/5/2013</b><br /><a href="seminar/173" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb173.jpg" height="40"></td>
+						<td valign="top">Clarence Chang</td>
+						<td valign="top">Superconducting Technology and Measuring the Cosmic Neutrino Background</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/21/2013</b><br /><a href="seminar/174" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb174.jpg" height="40"></td>
+						<td valign="top">Ed Westbrook & Al Thompson</td>
+						<td valign="top">Large Format CMOS-based Detectors for X-ray Diffraction</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/20/2013</b><br /><a href="seminar/175" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb175.jpg" height="40"></td>
+						<td valign="top">Samuele Sangiorgio</td>
+						<td valign="top">Towards Characterization of sub-keV Nuclear Recoils in Liquid Argon</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/6/2013</b><br /><a href="seminar/172" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb172.jpg" height="40"></td>
+						<td valign="top">Kent Irwin</td>
+						<td valign="top">Superconducting detector arrays: staying on the curve</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>1/23/2013</b><br /><a href="seminar/163" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb163.jpg" height="40"></td>
+						<td valign="top">Lindley Winslow</td>
+						<td valign="top">Revolution? Neutrinos and Nanotechnology</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>12/5/2012</b><br /><a href="seminar/171" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb171.jpg" height="40"></td>
+						<td valign="top">Dr. Daniel Brandt</td>
+						<td valign="top">Scalability of the Super CDMS Experiment</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/8/2012</b><br /><a href="seminar/170" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb170.jpg" height="40"></td>
+						<td valign="top">Markus Kuster</td>
+						<td valign="top">Detector Program for the European XFEL</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/26/2012</b><br /><a href="seminar/167" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb167.jpg" height="40"></td>
+						<td valign="top">Florian Aschauer</td>
+						<td valign="top">Ethernet Based Real Time Data Processing System</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/26/2012</b><br /><a href="seminar/166" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb166.jpg" height="40"></td>
+						<td valign="top">Cristoforo Marzocca</td>
+						<td valign="top">Integrated Front-End Electronics for SiPM Detectors in Medical Imaging Applications</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/26/2012</b><br /><a href="seminar/165" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb165.jpg" height="40"></td>
+						<td valign="top">Jean-Francois Pratte </td>
+						<td valign="top">Development of 3D Single Photon Counting Modules for Radiation Instrumentation</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/26/2012</b><br /><a href="seminar/164" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb164.jpg" height="40"></td>
+						<td valign="top">Matteo Porro</td>
+						<td valign="top">Development of the DEPFET Sensor with Signal Compression: a Large Format X-ray Imager with Mega-Frame Readout Capability for the European XFEL</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/26/2012</b><br /><a href="seminar/169" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb169.jpg" height="40"></td>
+						<td valign="top"></td>
+						<td valign="top">Mini Symposium</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/24/2012</b><br /><a href="seminar/160" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb160.jpg" height="40"></td>
+						<td valign="top">Dr. Ben Mazin</td>
+						<td valign="top">Microwave Kinetic Inductance Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/17/2012</b><br /><a href="seminar/162" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb162.jpg" height="40"></td>
+						<td valign="top">Eric Armengaud</td>
+						<td valign="top">EDELWEISS results and status</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/13/2012</b><br /><a href="seminar/157" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb157.jpg" height="40"></td>
+						<td valign="top">Pat McCarthy</td>
+						<td valign="top">Overview of the GMT telescope and First Light Instrumentation</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>8/8/2012</b><br /><a href="seminar/159" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb159.jpg" height="40"></td>
+						<td valign="top">Dr. Ted Liu</td>
+						<td valign="top">Tracking Trigger R&D for High Luminosity LHC</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/18/2012</b><br /><a href="seminar/156" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb156.jpg" height="40"></td>
+						<td valign="top">Dr. David Nygren</td>
+						<td valign="top">High-pressure Xenon Gas Electroluminescent TPC Developments for Simultaneous Searches for 0-¦Í ¦Â¦Â Decay & WIMP Dark Matter </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/20/2012</b><br /><a href="seminar/155" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb155.jpg" height="40"></td>
+						<td valign="top">Prof. Henry Frisch </td>
+						<td valign="top">The Development of Large-Area psec Photodetectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/18/2012</b><br /><a href="seminar/153" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb153.jpg" height="40"></td>
+						<td valign="top">Prof. Amin Arbabian</td>
+						<td valign="top">Single-chip sub-THz solutions for biomedical, security, communication, and large-scale array applications</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/28/2012</b><br /><a href="seminar/152" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb152.jpg" height="40"></td>
+						<td valign="top">Bart Verlaat</td>
+						<td valign="top">Evaporative CO2 cooling for thermal control of scientific equipments </td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/14/2012</b><br /><a href="seminar/151" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb151.jpg" height="40"></td>
+						<td valign="top">Adam Bernstein</td>
+						<td valign="top">Dark Matter and Coherent Scatter: Rare Event Detection in Fundamental and Applied Nuclear Physics </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/25/2012</b><br /><a href="seminar/150" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb150.jpg" height="40"></td>
+						<td valign="top">John Geary</td>
+						<td valign="top">The Kepler Mission to Establish the Frequency and Characteristics of Planets Around Other Stars</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/14/2011</b><br /><a href="seminar/149" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb149.jpg" height="40"></td>
+						<td valign="top">Brian Rodricks</td>
+						<td valign="top">High-Speed, High-Sensitivity sCMOS Image Sensors: Towards Single Photon Detection</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>11/16/2011</b><br /><a href="seminar/147" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb147.jpg" height="40"></td>
+						<td valign="top">Thomas Fritzsch</td>
+						<td valign="top">Trends in Wafer Level Packaging for Pixel Detector Applications</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/9/2011</b><br /><a href="seminar/145" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb145.jpg" height="40"></td>
+						<td valign="top">Emanuele Mandelli</td>
+						<td valign="top">CMOS pixels and visible light image sensors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/14/2011</b><br /><a href="seminar/146" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb146.jpg" height="40"></td>
+						<td valign="top">Megan Eckart</td>
+						<td valign="top">Microcalorimeter Arrays for X-ray Astrophysics: Astro-H SXS and TES Detector Development</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/27/2011</b><br /><a href="seminar/144" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb144.jpg" height="40"></td>
+						<td valign="top">Professor Rusty Harris</td>
+						<td valign="top">High Voltage GaN Devices for Photovoltaics and High Frequency Switched Power Supplies </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/14/2011</b><br /><a href="seminar/143" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb143.jpg" height="40"></td>
+						<td valign="top">Brenna Flaugher</td>
+						<td valign="top">The Dark Energy Survey Camera (DECam)</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/13/2011</b><br /><a href="seminar/142" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb142.jpg" height="40"></td>
+						<td valign="top">Constance Rockosi</td>
+						<td valign="top">Science and Performance of the Sloan Digital Sky Survey</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/16/2011</b><br /><a href="seminar/141" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb141.jpg" height="40"></td>
+						<td valign="top">Roman Poeschl</td>
+						<td valign="top">Electromagnetic Calorimeter for a Future Lepton Collider</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/9/2011</b><br /><a href="seminar/140" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb140.jpg" height="40"></td>
+						<td valign="top">John R. Thome </td>
+						<td valign="top">Microchannel Flow Boiling of CO2: Applications to 2D and 3D Detector Cooling</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/28/2011</b><br /><a href="seminar/139" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb139.jpg" height="40"></td>
+						<td valign="top">Sven Herrmann</td>
+						<td valign="top">DEPFET: a Versatile Detector Concept for X-ray Astrophysics, Particle Physics and Photon Science</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/10/2010</b><br /><a href="seminar/137" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb137.jpg" height="40"></td>
+						<td valign="top">Prof. Mark Horowitz</td>
+						<td valign="top">Improving Analog Design Methodology</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>11/8/2010</b><br /><a href="seminar/138" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb138.jpg" height="40"></td>
+						<td valign="top">Gabriella Carini</td>
+						<td valign="top">Developing detectors for new light sources</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/22/2010</b><br /><a href="seminar/136" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb136.jpg" height="40"></td>
+						<td valign="top">M. Bonner Denton</td>
+						<td valign="top">Advanced Photon and Ion Detection Technologies </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>8/18/2010</b><br /><a href="seminar/135" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb135.jpg" height="40"></td>
+						<td valign="top">Prof. Boris Murmann</td>
+						<td valign="top">Digitizing the Analog World: Challenges and Opportunities</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/9/2010</b><br /><a href="seminar/131" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb131.jpg" height="40"></td>
+						<td valign="top">Mark Bautz </td>
+						<td valign="top">Progress and Prospects for High-Resolution Imaging & Dispersive Spectroscopy for X-ray Astronomy</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/12/2010</b><br /><a href="seminar/130" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb130.jpg" height="40"></td>
+						<td valign="top">Chih-Hao Li</td>
+						<td valign="top">Astro-comb, a new tool to find other Earths</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/2/2010</b><br /><a href="seminar/128" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb128.jpg" height="40"></td>
+						<td valign="top">Toshinobu Miyoshi</td>
+						<td valign="top">Developments of SOI Monolithic Pixel Detectors </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/18/2010</b><br /><a href="seminar/129" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb129.jpg" height="40"></td>
+						<td valign="top">Satish K Dhawan</td>
+						<td valign="top">How to Deliver Oodles and Oodles of Current to HEP Detectors in High Radiation and Magnetic Fields?</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/10/2010</b><br /><a href="seminar/126" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb126.jpg" height="40"></td>
+						<td valign="top">Bruce Baller</td>
+						<td valign="top">The Liquid Argon Time Projection Chamber (LAr TPC) in Neutrino Physics</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/13/2010</b><br /><a href="seminar/127" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb127.jpg" height="40"></td>
+						<td valign="top">Ronald Lipton</td>
+						<td valign="top">3D Detector/Electronics Integration Technologies - Applications to LC, SLHC and Photon Sources</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/9/2009</b><br /><a href="seminar/125" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb125.jpg" height="40"></td>
+						<td valign="top">Anton Tremsin and Oswald Siegmund</td>
+						<td valign="top">High resolution photon counting detectors with microchannel plates: recent progress and new developments</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>11/11/2009</b><br /><a href="seminar/124" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb124.jpg" height="40"></td>
+						<td valign="top">Steve Schnetzer</td>
+						<td valign="top">The Pixel Luminosity Telescopes: a Dedicated Luminosity Monitor for CMS </td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/14/2009</b><br /><a href="seminar/123" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb123.jpg" height="40"></td>
+						<td valign="top">Akito Kusaka</td>
+						<td valign="top">QUIET Experiment and HEMT Receiver Array</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/2/2009</b><br /><a href="seminar/122" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb122.jpg" height="40"></td>
+						<td valign="top">Gottfried Kanbach</td>
+						<td valign="top">Development of gamma-ray detectors for MeV gamma-ray astrophysics</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/22/2009</b><br /><a href="seminar/119" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb119.jpg" height="40"></td>
+						<td valign="top">Gary S. Varner</td>
+						<td valign="top">Radio Detection of Extreme Energy Collisions</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/10/2009</b><br /><a href="seminar/118" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb118.jpg" height="40"></td>
+						<td valign="top">Peter Krizan</td>
+						<td valign="top">Novel sensors for Cherenkov counters</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/3/2009</b><br /><a href="seminar/117" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb117.jpg" height="40"></td>
+						<td valign="top">Paolo Gorla</td>
+						<td valign="top">Macrobolometers for rare events physics: the 1000 crystals challenge and beyond</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/27/2009</b><br /><a href="seminar/121" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb121.jpg" height="40"></td>
+						<td valign="top">Gil Travish</td>
+						<td valign="top">Laser-powered micro accelerator</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>5/13/2009</b><br /><a href="seminar/120" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb120.jpg" height="40"></td>
+						<td valign="top">Marc Christophersen</td>
+						<td valign="top">Micro-machined Silicon Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/29/2009</b><br /><a href="seminar/115" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb115.jpg" height="40"></td>
+						<td valign="top">Daniel Rugar</td>
+						<td valign="top">Nanoscale Magnetic Resonance Imaging – The Quest for a Molecular Structure Microscope</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/15/2009</b><br /><a href="seminar/116" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb116.jpg" height="40"></td>
+						<td valign="top">Paul Brink</td>
+						<td valign="top">The Cryogenic Dark Matter Search (CDMS) : status and future</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/1/2009</b><br /><a href="seminar/113" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb113.jpg" height="40"></td>
+						<td valign="top">Neal H. Clinthorne</td>
+						<td valign="top">Instrumentation for High Resolution Positron Emission Tomography</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/18/2009</b><br /><a href="seminar/112" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb112.jpg" height="40"></td>
+						<td valign="top">Clarence Chang</td>
+						<td valign="top">Micro-bolometer arrays and the South Pole Telescope</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/4/2009</b><br /><a href="seminar/111" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb111.jpg" height="40"></td>
+						<td valign="top">James Buckley</td>
+						<td valign="top">VERITAS and AGIS: Atmospheric Cherenkov Telescopes for Very High Energy Gamma-Ray Astrophysics</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>1/21/2009</b><br /><a href="seminar/110" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb110.jpg" height="40"></td>
+						<td valign="top">Cinzia Da Via</td>
+						<td valign="top">3D silicon Detectors for LHC Upgrades</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/7/2009</b><br /><a href="seminar/109" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb109.jpg" height="40"></td>
+						<td valign="top">Takeo Higuchi</td>
+						<td valign="top"> COPPER System  -- Modularized Pipeline Readout Electronics for Higher-Luminosity B-Factory Experiment</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/10/2008</b><br /><a href="seminar/99" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb99.jpg" height="40"></td>
+						<td valign="top">Andrea Pocar</td>
+						<td valign="top">Techniques in Fabrication of Flexible Circuits</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>12/3/2008</b><br /><a href="seminar/104" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb104.jpg" height="40"></td>
+						<td valign="top">Paul O'Connor</td>
+						<td valign="top">Hot or Not? Power dissipation in analog front end electronics for 2D detectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/12/2008</b><br /><a href="seminar/108" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb108.jpg" height="40"></td>
+						<td valign="top">Patric Muggli</td>
+						<td valign="top">Plasma Wakefield Accelerator Experiments and their Diagnostics  </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/29/2008</b><br /><a href="seminar/107" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb107.jpg" height="40"></td>
+						<td valign="top">Harry van der Graaf</td>
+						<td valign="top">GOSSIP Tracking Detectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/1/2008</b><br /><a href="seminar/106" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb106.jpg" height="40"></td>
+						<td valign="top">Toshinori Abe</td>
+						<td valign="top">Hybrid Photon Detectors </td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/17/2008</b><br /><a href="seminar/103" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb103.jpg" height="40"></td>
+						<td valign="top">Peter von Ballmoos</td>
+						<td valign="top">A DUAL Mission for Nuclear Astrophysics - Focusing gamma rays -</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/3/2008</b><br /><a href="seminar/102" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb102.jpg" height="40"></td>
+						<td valign="top">Joel Goldstein</td>
+						<td valign="top">Heavy Flavour Identification at Linear Colliders</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>8/27/2008</b><br /><a href="seminar/101" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb101.jpg" height="40"></td>
+						<td valign="top">Lothar Strüder</td>
+						<td valign="top">Detectors for the experiments at FLASH, LCLS, SCSS and XFEL  – The fine art of high speed X-ray imaging – </td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>8/20/2008</b><br /><a href="seminar/100" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb100.jpg" height="40"></td>
+						<td valign="top">Gregg Thayer</td>
+						<td valign="top">The GLAST Large Area Telescope, Data Acquisition in Low Earth Orbit</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>7/23/2008</b><br /><a href="seminar/97" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb97.jpg" height="40"></td>
+						<td valign="top">Volker Schlott</td>
+						<td valign="top">Sub-picosecond beam diagnostics</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/9/2008</b><br /><a href="seminar/98" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb98.jpg" height="40"></td>
+						<td valign="top">Masaaki Hayashida</td>
+						<td valign="top">Developments of new photodetectors for Imaging Atmospheric Chrenkov Telescopes within the MAGIC-II project.</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/25/2008</b><br /><a href="seminar/96" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb96.jpg" height="40"></td>
+						<td valign="top">John Byrd</td>
+						<td valign="top">Synchronicity: high precision timing and synchronization for next generation light sources</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/11/2008</b><br /><a href="seminar/95" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb95.jpg" height="40"></td>
+						<td valign="top">Yoshio Nishi</td>
+						<td valign="top">Stanford Nanofabrication Facility - Shared infrastructure for nanoscience and engineering research</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/28/2008</b><br /><a href="seminar/87" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb87.jpg" height="40"></td>
+						<td valign="top">Uwe Oberlack</td>
+						<td valign="top">Liquid Xenon TPC: A Tool for Dark Matter Search</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>5/14/2008</b><br /><a href="seminar/93" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb93.jpg" height="40"></td>
+						<td valign="top">Justin Vandenbroucke</td>
+						<td valign="top">Pop goes the neutrino: acoustic detection of astrophysical neutrinos</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/30/2008</b><br /><a href="seminar/94" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb94.jpg" height="40"></td>
+						<td valign="top">Mike Pivovaroff</td>
+						<td valign="top">X-ray optics for FEL and Astrophysics</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/2/2008</b><br /><a href="seminar/92" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb92.jpg" height="40"></td>
+						<td valign="top">Stefan Hau-Riege</td>
+						<td valign="top">X-ray-matter interaction at LCLS: Optics design, photon diagnostics, and imaging</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/19/2008</b><br /><a href="seminar/88" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb88.jpg" height="40"></td>
+						<td valign="top">Stephen Derenzo</td>
+						<td valign="top">The quest for new radiation detector materials</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/5/2008</b><br /><a href="seminar/90" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb90.jpg" height="40"></td>
+						<td valign="top">Andrew Sonnenschein</td>
+						<td valign="top">Bubble Chambers for Dark Matter Detection</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/20/2008</b><br /><a href="seminar/91" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb91.jpg" height="40"></td>
+						<td valign="top">Brian Lantz</td>
+						<td valign="top">Advanced LIGO: the Next Gravitational Wave Observatory</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/6/2008</b><br /><a href="seminar/89" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb89.jpg" height="40"></td>
+						<td valign="top">Daniel Palanker</td>
+						<td valign="top">High Resolution Optoelectronic Retinal Prosthesis</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/9/2008</b><br /><a href="seminar/86" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb86.jpg" height="40"></td>
+						<td valign="top">Hartmut F.-W. Sadrozinski</td>
+						<td valign="top">Development of Radiation Hard Tracking Detectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>12/12/2007</b><br /><a href="seminar/82" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb82.jpg" height="40"></td>
+						<td valign="top">Henry Kapteyn</td>
+						<td valign="top">High Average power Ultrafast Lasers and Application in Coherent EUV/x-ray Generation</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>11/28/2007</b><br /><a href="seminar/81" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb81.jpg" height="40"></td>
+						<td valign="top">John Bowers</td>
+						<td valign="top">Hybrid Silicon Evanescent Lasers and Photonic Integrated Circuits</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>11/14/2007</b><br /><a href="seminar/85" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb85.jpg" height="40"></td>
+						<td valign="top">Jerry Va'vra</td>
+						<td valign="top">High-resolution timing in photon detection – a new frontier in physics</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>10/31/2007</b><br /><a href="seminar/79" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb79.jpg" height="40"></td>
+						<td valign="top">Robert Johnson</td>
+						<td valign="top">The GLAST LAT Tracker - A Large-Scale Application of Solid-State Detectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>10/3/2007</b><br /><a href="seminar/78" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb78.jpg" height="40"></td>
+						<td valign="top">Kent Irwin</td>
+						<td valign="top">Superconducting detector arrays: from cosmology to nuclear non-proliferation</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>9/19/2007</b><br /><a href="seminar/77" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb77.jpg" height="40"></td>
+						<td valign="top">Takaaki Tanaka</td>
+						<td valign="top">Development of High-Z Semiconductor Detectors and Their Applications to X-ray/Gamma-ray Astronomy</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>9/5/2007</b><br /><a href="seminar/75" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb75.jpg" height="40"></td>
+						<td valign="top">Harris Kagan</td>
+						<td valign="top">Diamond Detectors in High Radiation Environments</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>8/22/2007</b><br /><a href="seminar/74" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb74.jpg" height="40"></td>
+						<td valign="top">Masashi Yokoyama</td>
+						<td valign="top">Silicon-based Photo-Multiplier: a new generation of photon detector</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>7/25/2007</b><br /><a href="seminar/73" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb73.jpg" height="40"></td>
+						<td valign="top">Carl Haber</td>
+						<td valign="top">New Imaging Methods Applied to Recorded Sound Preservation and Access</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>7/11/2007</b><br /><a href="seminar/72" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb72.jpg" height="40"></td>
+						<td valign="top">Gary S. Varner</td>
+						<td valign="top">ASICs for Next Generation Particle and Astroparticle Detectors</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>6/27/2007</b><br /><a href="seminar/70" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb70.jpg" height="40"></td>
+						<td valign="top">Erik Heijne</td>
+						<td valign="top">Vectors, Voxels, Submicron, Tricks for Tracking in Silicon Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>6/13/2007</b><br /><a href="seminar/71" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb71.jpg" height="40"></td>
+						<td valign="top">Bill Schlotter</td>
+						<td valign="top">Fourier Transform Holography - Single Shot Imaging on a Photon Budget</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>5/30/2007</b><br /><a href="seminar/69" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb69.jpg" height="40"></td>
+						<td valign="top">Kirk Gilmore</td>
+						<td valign="top">Instrumentation for Optical and Infrared Telescopes</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>5/16/2007</b><br /><a href="seminar/68" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb68.jpg" height="40"></td>
+						<td valign="top">Joe Dwyer</td>
+						<td valign="top">Measuring X-Ray Emission from Lightning</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>5/2/2007</b><br /><a href="seminar/67" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb67.jpg" height="40"></td>
+						<td valign="top">Peter Weilhammer</td>
+						<td valign="top">The Role of Silicon Radiation Sensors and Integrated Front-End Electronics In Medical Imaging Instrumentation</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>4/18/2007</b><br /><a href="seminar/66" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb66.jpg" height="40"></td>
+						<td valign="top">Jessamyn Fairfield</td>
+						<td valign="top">A New Generation of Red-Sensitive CCDs</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>4/4/2007</b><br /><a href="seminar/64" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb64.jpg" height="40"></td>
+						<td valign="top">Cameron Geddes</td>
+						<td valign="top">Acceleration at the hundred GV/m scale using Laser Wakefields</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>3/21/2007</b><br /><a href="seminar/63" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb63.jpg" height="40"></td>
+						<td valign="top">Joe Incandela</td>
+						<td valign="top">The CMS All-Silicon Tracker</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>3/7/2007</b><br /><a href="seminar/62" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb62.jpg" height="40"></td>
+						<td valign="top">Peter Denes</td>
+						<td valign="top">Integrated Circuits for Advanced Detectors</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>2/21/2007</b><br /><a href="seminar/61" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb61.jpg" height="40"></td>
+						<td valign="top">Dr. Jesse Wodin</td>
+						<td valign="top">Single Ion Tagging for the Enriched Xenon Observatory</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>2/7/2007</b><br /><a href="seminar/60" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb60.jpg" height="40"></td>
+						<td valign="top">Dr. Lothar Strüder</td>
+						<td valign="top">Home made imaging X-ray detectors - high speed, low noise, low power,radiation hard, high Q.E.</td>
+						
+						
+					</tr>
+				
+					<tr bgcolor="#FFFFFF" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow">
+						<td align="center" valign="top"><b>1/24/2007</b><br /><a href="seminar/59" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb59.jpg" height="40"></td>
+						<td valign="top">Peter Hommelhoff</td>
+						<td valign="top">Prospects and applications of an ultrafast nanometric electron source</td>
+					</tr>
+				
+				
+				
+					<tr bgcolor="#E1EBED" class="unactive" onMouseOver="this.className='active1'" onMouseOut="this.className='unactive1'" style="CURSOR: arrow;">
+						<td align="center" valign="top"><b>1/10/2007</b><br /><a href="seminar/58" style="font-size:8pt;color:#333333;">Details</a></td>
+						<td valign="top"><img src="publicDocs/thumb58.jpg" height="40"></td>
+						<td valign="top">Helmuth Spieler</td>
+						<td valign="top">Bolometers and the Big Bang – Detector Arrays for Next-Generation CMB Experiments</td>
+						
+						
+					</tr>
+				
+			</table>
+			
+
+
+
+
+			
+			
+			</div>
+		</td>
+	</tr>
+</tbody>
+</table>
+<!-- stopindex --><html><body>
+
+    <script type="text/javascript">
+    <!--
+	    slac_search_and_links = "no";
+	    search_default = "custom";
+	    custom_search = "no";
+	    custom_search_type = "ais";
+	    custom_search_label = "ais";
+	    slac_footer = "yes";
+    //-->
+    </script>
+    <script type="text/javascript" src="https://www-project.slac.stanford.edu/centralNav/slac_global_090212.js"></script>
+    
+<div class="contact">
+	<script type="text/javascript">
+<!--//
+var zap_domain = "slac.stanford.edu"
+var zap_user = "websiteservices"
+var zap_recipient = zap_user + "@" + zap_domain
+var zap_url = "mailto:" + zap_recipient +"?subject=AIS Website Question/Comment&body=My comments concern the page at: " + " " + escape(top.parent.location.href) 
+document.write('<a href="' + zap_url + '" target=>Page Contact</a>')
+//-->
+</script>
+	</div></body></html>
+<!-- startindex -->
+
+</body>
+</html>
