@@ -1135,29 +1135,44 @@ form input[type="submit"], form button, form input[type="reset"] {
 .header-bar {
   *zoom: 1;
   background: white;
-  border-radius: 5px; }
+  border-radius: 5px; 
+align-content: center; 
+text-align: center;
+float: none;
+align-items: center; 
+text-align-last: center;
+    margin: auto;
+    
+    
+}
   .header-bar:after {
     content: " ";
     clear: both;
     display: block;
     overflow: hidden;
-    height: 0; }
+    height: 0;
+    float: none; }
 
 .branding {
   float: left;
   padding: 15px; }
   .branding .logo, .branding .logo-type {
     display: inline-block;
-    vertical-align: middle; }
+    vertical-align: middle; 
+    text-align: center; }
   .branding .logo {
     margin-right: 10px; }
   .branding .logo-type .site-title {
     margin: 0 0 5px;
     font-size: 50px;
-    font-size: 1.0666666667em; }
+    font-size: 1.0666666667em;
+    text-align: center;
+    
+     }
   .branding .logo-type .site-description {
     font-size: 12px;
-    font-size: 0.8em; }
+    font-size: 0.8em; 
+    text-align: center; }
 
 .main-navigation {
   *zoom: 1;
