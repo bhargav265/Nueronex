@@ -1142,6 +1142,7 @@ float: none;
 align-items: center; 
 text-align-last: center;
     margin: auto;
+    padding-top: 20px;
     
     
 }
@@ -1154,7 +1155,6 @@ text-align-last: center;
     float: none; }
 
 .branding {
-  float: left;
   padding: 15px; }
   .branding .logo, .branding .logo-type {
     display: inline-block;
@@ -1477,8 +1477,8 @@ text-align-last: center;
     margin-bottom: 10px; }
   .team .team-name {
     font-size: 16px;
-    font-size: 1.0666666667em;
-    font-weight: 400; }
+    font-size: 30px;
+    font-weight: 1000; }
   .team .social-links a {
     background: white;
     border: none;
